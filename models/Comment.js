@@ -29,7 +29,15 @@ Comment.init(
         key: 'id',
       }
     },
-    
+    content: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    date_created: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    }
   },
   {
     sequelize,
